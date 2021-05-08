@@ -1,16 +1,46 @@
-# expense
+# Despesas Pessoais
 
-A new Flutter project.
+## Instalação:
 
-## Getting Started
+### Clone o aplicativo
 
-This project is a starting point for a Flutter application.
+```jsx
+git clone https://github.com/clebemachado/consumo-app.git
+```
 
-A few resources to get you started if this is your first Flutter project:
+### Instale as dependências
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```jsx
+flutter pub get
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+# 📱 Requisitos funcionais
+
+- O aplicativo deve ter um botão para adicionar novas despesas;
+- O aplicativo deve ter um botão para remover as despesas da lista;
+- O aplicativo deve possuir uma gráfico dinâmico dos últimos 7 dias de consumo;
+- O aplicativo deve listar todos os consumos;
+
+---
+
+# 👷🏾 Aprendizado adquirido
+
+- Utilização básica do Stack;
+- Utilização de stateless vs stateful;
+- Utilização do showModalBottomSheet e showDatePicker;
+- Fragmentação do código em vários widgets;
+- Datas personalizadas;
+- Listar e utilizar dados de uma lista local;
+- Erros diversos, como overflow;
+
+---
+
+# Capturas do aplicativo
+
+### Home:
+
+![Despesas%20Pessoais%20b818d78cd5fc45f8825b0081d922044b/Untitled.png](Despesas%20Pessoais%20b818d78cd5fc45f8825b0081d922044b/Untitled.png)
+
+### Lista de contatos vazia
