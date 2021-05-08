@@ -1,5 +1,7 @@
 # Despesas Pessoais
 
+### Curso ministrado pela Cod3r flutter
+
 ## Instalação:
 
 ### Clone o aplicativo
@@ -37,10 +39,16 @@ flutter pub get
 
 ---
 
-# Capturas do aplicativo
+# :camera: Capturas do aplicativo
 
 ### Home:
 
-![Despesas%20Pessoais%20b818d78cd5fc45f8825b0081d922044b/Untitled.png](Despesas%20Pessoais%20b818d78cd5fc45f8825b0081d922044b/Untitled.png)
+<img src="https://user-images.githubusercontent.com/66011013/117522094-ce35a500-af87-11eb-866e-58ffb7e32f6e.jpeg" alt="drawing" width="200"/>
 
-### Lista de contatos vazia
+### Formulário para adicionar novas despesas:
+
+<img src="https://user-images.githubusercontent.com/66011013/117522100-d261c280-af87-11eb-80df-e9581fc2f8a3.jpeg" alt="drawing" width="200"/>
+
+### Listas de despesas com gráfico dinâmico:
+
+<img src="https://user-images.githubusercontent.com/66011013/117522101-d2fa5900-af87-11eb-97eb-42b1460660e0.jpeg" alt="drawing" width="200"/>
