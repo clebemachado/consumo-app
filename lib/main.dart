@@ -1,3 +1,5 @@
+import 'package:expense/components/chart.dart';
+
 import 'models/transactions.dart';
 import 'components/transaction_form.dart';
 import 'components/transaction_list.dart';
@@ -20,6 +22,11 @@ class ExpensesApp extends StatelessWidget {
                 fontFamily: 'OpenSans',
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
+              ),
+              button: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 14,
               ),
             ),
         appBarTheme: AppBarTheme(
@@ -44,27 +51,22 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final List<Transactions> _transactions = [
-    // Transactions(
-    //   id: 't1',
-    //   title: 'Novo Tênis de Corrida',
-    //   value: 310.76,
-    //   date: DateTime.now(),
-    // ),
-    // Transactions(
-    //   id: 't2',
-    //   title: 'Conta de Luz',
-    //   value: 211.30,
-    //   date: DateTime.now(),
-    // ),
-  ];
+  final List<Transactions> _transactions = [];
 
-  _addTransaction(String title, double value) {
+  List<Transactions> get _recentTransactions {
+    return _transactions.where((tr) {
+      return tr.date.isAfter(
+        DateTime.now().subtract(Duration(days: 7)),
+      );
+    }).toList();
+  }
+
+  _addTransaction(String title, double value, DateTime date) {
     final newTransaction = Transactions(
       id: Random().nextDouble().toString(),
       title: title,
       value: value,
-      date: DateTime.now(),
+      date: date,
     );
 
     setState(() {
@@ -74,6 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
       Duration(milliseconds: 75),
       () => Navigator.of(context).pop(),
     );
+  }
+
+  _removeTransaction(String id) {
+    setState(() {
+      _transactions.removeWhere((tr) => tr.id == id);
+    });
   }
 
   _opentransactionFormModal(BuildContext context) {
@@ -103,14 +111,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              child: Card(
-                color: Colors.blue,
-                elevation: 5,
-                child: Text('Gráfico'),
-              ),
+            Chart(
+              recentTransactions: _recentTransactions,
             ),
-            TransactionList(transactions: _transactions),
+            TransactionList(
+              transactions: _transactions,
+              onRemove: _removeTransaction,
+            ),
           ],
         ),
       ),
