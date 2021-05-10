@@ -36,6 +36,8 @@ flutter pub get
 - Datas personalizadas;
 - Listar e utilizar dados de uma lista local;
 - Erros diversos, como overflow;
+- Utilização de MediaQuery
+- Adaptando o código de forma básica para IOS
 
 ---
 
