@@ -1,7 +1,5 @@
 # Despesas Pessoais
 
-### Curso ministrado pela Cod3r flutter
-
 ## Instalação:
 
 ### Clone o aplicativo
